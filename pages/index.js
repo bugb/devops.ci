@@ -4,30 +4,14 @@ import styles from '@/styles/Home.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
-import { Col, Container, Card, Image, Nav, Navbar, NavDropdown, Row } from 'react-bootstrap';
+import { Col, Container, Card, Image, NavDropdown, Row } from 'react-bootstrap';
+
+import Navbar from "../components/Navbar.js"
 
 export default function Home() {
   return (
     <Container>
-    {/* NAVBAR STARTS */}
-      <Navbar
-        className="fj-navbar fj-nav-base"
-        bg="transparent"
-        expand="lg" >
-        <Navbar.Brand className="fj-navbar-brand">
-          <a href="#"></a>
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ml-auto">
-            <Nav.Link
-              className="fj-navbar-item fj-navbar-link"
-              href='/'>Home
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-      {/* NAVBAR ENDS */}
+      <Navbar />
       <div className='blog-detail-page'>
         <Row>
           <Col md="8">
