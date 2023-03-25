@@ -6,7 +6,8 @@ const inter = Inter({ subsets: ['latin'] })
 
 import { Col, Container, Card, Image, NavDropdown, Row } from 'react-bootstrap';
 
-import Navbar from "components/Navbar.js"
+import Navbar from "components/Navbar"
+import BlogFooter from "components/Footer"
 
 export default function Home() {
   return (
@@ -103,13 +104,7 @@ export default function Home() {
           </Row>
         </div>
       </div>
-      <footer className="page-footer">
-        <div>
-          <a href="#"></a>{' | '}
-          <a href="#"></a>{' | '}
-          <a href="#"></a>
-        </div>
-      </footer>
+      <BlogFooter />
     </Container>
   )
 }
