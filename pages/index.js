@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 import { Col, Container, Card, Image, NavDropdown, Row } from 'react-bootstrap';
 
-import Navbar from "../components/Navbar.js"
+import Navbar from "components/Navbar.js"
 
 export default function Home() {
   return (
