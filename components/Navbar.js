@@ -1,6 +1,6 @@
 import { Nav, Navbar } from 'react-bootstrap';
 
-export default function() {
+const BlogNavbar = () => {
   return (
     <Navbar
       className="fj-navbar fj-nav-base"
@@ -22,3 +22,4 @@ export default function() {
   )
 }
 
+export default BlogNavbar
