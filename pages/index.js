@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 import { Col, Container, Card, Image, NavDropdown, Row } from 'react-bootstrap';
 
-import {getAllBlogs} from 'lib/api'
+import {getAllPosts} from 'lib/api'
 
 import PageLayout from 'components/PageLayout';
 import AuthorIntro from 'components/AuthorIntro'
@@ -48,7 +48,7 @@ export default function Home({blogs}) {
 }
 
 export async function getStaticProps() {
-  const blogs = await getAllBlogs()
+  const blogs = await getAllPosts()
   return {
     props: {
      blogs,
