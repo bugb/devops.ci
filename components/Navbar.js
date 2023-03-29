@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { Nav, Navbar } from 'react-bootstrap';
 
 const BlogNavbar = () => {
@@ -14,8 +15,8 @@ const BlogNavbar = () => {
         <Nav className="ml-auto">
           <Nav.Link
             className="fj-navbar-item fj-navbar-link"
-            href='/'>Home
-          </Nav.Link>
+            as={() => <Link href="/">Home</Link>}
+          />
         </Nav>
       </Navbar.Collapse>
     </Navbar>
