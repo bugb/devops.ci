@@ -1,5 +1,6 @@
 import { Card } from 'react-bootstrap'
-const CardItem = ({title, subtitle, image, date, author: {name, avatar}}) => {
+import Link from 'next/link'
+const CardItem = ({title, subtitle, image, date, author: {name, avatar}, link}) => {
   return (
     <Card className={`fj-card`}>
       <div className="card-body-wrapper">
@@ -27,9 +28,15 @@ const CardItem = ({title, subtitle, image, date, author: {name, avatar}}) => {
           <Card.Text>{subtitle}</Card.Text>
         </Card.Body>
       </div>
-      <a className="card-button">
-        Read More
-      </a>
+
+      {/*use Link will be much faster than ahref*/}
+      { link &&
+        <Link {...link}>
+          <span className="card-button">
+            Read More
+          </span>
+        </Link>
+      }
     </Card>
   )
 }
