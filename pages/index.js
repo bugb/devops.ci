@@ -13,19 +13,27 @@ import AuthorIntro from 'components/AuthorIntro'
 import CardListItem from 'components/CardListItem';
 import CardItem from 'components/CardItem';
 
-export default function Home(props) {
+export default function Home({blogs}) {
   return (
     <PageLayout>
       <AuthorIntro/>
       <hr/>
-      {JSON.stringify(props.blogs)}
       <Row className="mb-5">
-        <Col md="10">
+       {/* <Col md="10">
           <CardListItem />
         </Col>
-        <Col md="4">
-          <CardItem />
-        </Col>
+        */}
+        {
+          blogs.map(blog =>
+            // actually, we dont need key here*
+            <Col md="4" key={blog.slug}>
+              <CardItem
+                title = {blog.title}
+                subtitle = {blog.subtitle}
+              />
+            </Col>
+          )
+        }
       </Row>
     </PageLayout>
   )
