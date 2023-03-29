@@ -1,4 +1,4 @@
-import { Source_Code_Pro } from 'next/font/google'
+import { Albert_Sans } from 'next/font/google'
 
 import '@/styles/globals.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
