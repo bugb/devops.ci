@@ -14,6 +14,7 @@ import CardListItem from 'components/CardListItem';
 import CardItem from 'components/CardItem';
 
 export default function Home({blogs}) {
+  //debugger
   return (
     <PageLayout>
       <AuthorIntro/>
@@ -30,6 +31,8 @@ export default function Home({blogs}) {
               <CardItem
                 title = {blog.title}
                 subtitle = {blog.subtitle}
+                image = {blog.coverImage}
+                date = {blog._updatedAt}
               />
             </Col>
           )
