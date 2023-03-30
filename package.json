@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@sanity/block-content-to-react": "^3.0.0",
     "@sanity/client": "^5.4.0",
     "bootstrap": "^5.2.3",
     "eslint": "8.36.0",
